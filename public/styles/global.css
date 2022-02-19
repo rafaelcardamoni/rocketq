@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+html {
+  --black: #0d114f;
+  --white: #fafafa;
+  --red: #e83f5b;
+  --secondary-color: #e0ecff;
+  --main-color: #3485ff;
+  --background: #fafafa;
+  --overlay: #040911;
+  --details: #a5b0c1;
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-medium: #d3d9e2;
+  --grey-light: #e5eaf1;
+  --grey-lighter: #eaecf2;
+  --hover-main: #5699ff;
+  --hover-red: #ea4b65;
+  --hover-grey: #8794a7;
+
+  /* title font */
+  /* font-family: 'Poppins', sans-serif; */
+
+  /* regular text font */
+  /* font-family: 'Open Sans', sans-serif; */
+
+  /* Setting the default html font size to 10px (62.5% of 16px default) */
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+  display: flex;
+}
+
+body,
+button,
+input,
+textarea {
+  /* parameters - font min-size / default preferred font-size / font max-size  */
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.no-styling {
+  background: var(--white);
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: auto;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Input and buttons default values */
+button,
+input,
+.button {
+  height: 4rem;
+  border-radius: 0.8rem;
+}
+
+button,
+.button {
+  font-family: 'Poppins';
+  font-weight: 500;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  color: var(--white);
+  cursor: pointer;
+  transition: filter 0.2s;
+  white-space: nowrap;
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(1.1);
+}
+
+button > img,
+.button > img {
+  width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+  background: var(--white);
+  color: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+}
+
+button.blue,
+.button.blue {
+  background: var(--main-color);
+  color: var(white);
+}
+
+button.blue:hover,
+.button.blue:hover {
+  background: var(--hover-main);
+}
+
+button.red,
+.button.red {
+  background: var(--red);
+  color: var(white);
+}
+
+button.red:hover,
+.button.red:hover {
+  background: var(--hover-red);
+}
+
+button.grey,
+.button.grey {
+  background: var(--grey-light);
+  color: var(--grey-dark);
+  transition: 0.3s;
+}
+
+button.grey:hover,
+.button.grey:hover {
+  background: var(--hover-grey);
+  color: var(--white);
+}
+
+/* header */
+.content header {
+  width: 80%;
+  margin: 3.5rem auto;
+}
+
+.content header img {
+  width: 16.7rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding: -5rem;
+}
+
+.tooltip .tooltiptext {
+  display: block;
+  visibility: hidden;
+  width: 150%;
+  background-color: var(--grey-dark);
+  color: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1.9rem;
+  position: absolute;
+  z-index: 1;
+  bottom: -140%;
+  left: 4rem;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 10rem;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

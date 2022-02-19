@@ -1,0 +1,61 @@
+.modal-wrapper.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal form input.hidden {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.modal-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(4, 9, 17, 0.8);
+}
+
+.modal-wrapper .modal .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.modal-wrapper .modal .buttons > button,
+.modal-wrapper .modal .buttons > .button {
+  padding: 2.5rem 3.5rem;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  text-align: center;
+  width: min(59rem, 90%);
+  margin: auto;
+  background: var(--white);
+  border-radius: 0.8rem;
+  padding: 6.4rem;
+  gap: 2rem;
+}
+
+.modal-wrapper .modal input {
+  margin-bottom: 1.5rem;
+  padding: 2.4rem 1.6rem;
+  border: 0.2rem solid var(--main-color);
+  width: min(30rem, 75%);
+  outline: none;
+}
+
+.modal-wrapper .modal input:focus {
+  border-color: var(--dark-grey);
+}

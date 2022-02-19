@@ -1,0 +1,29 @@
+<section>
+  <h2>Join a room</h2>
+  <form action="/enter-room" method="post">
+    <label for="room-id" class="sr-only">Password</label>
+    <input
+      type="number"
+      name="roomId"
+      placeholder="Password"
+      id="room-id"
+      required
+    />
+    <button>
+      <img src="/images/enter-room.svg" alt="Join a room" />
+      Join
+    </button>
+  </form>
+</section>
+<div class="separator">
+  <div></div>
+  <div>or</div>
+  <div></div>
+</div>
+<section>
+  <h2>Create your own room, it's fast and easy!</h2>
+  <a href="/create-pass" class="button outlined">
+    <img src="/images/users.svg" alt="Create room" />
+    <span>Create</span>
+  </a>
+</section>
